@@ -1,0 +1,203 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@media (max-width: 768px) {
+    .image-item .video {
+        flex: 1 1 calc(50% - 20px); /* Ajusta para duas imagens por linha em tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-item .video {
+        flex: 1 1 100%; /* Ajusta para uma imagem por linha em celulares */
+    }
+}
+
+
+:root {
+    --cor0: #e6e4a9;
+    --cor1: #faf551;
+    --cor2: #faf31e;
+    --cor3: #FAE13C;
+    --cor4: #a88314;
+    --cor5: #465206;
+
+    --font-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --font-destaque: "Bebas Neue", cursive;
+
+}
+
+*{
+    margin:  0px;
+    padding: 0px;
+}
+
+body{
+    background-color: var(--cor0);
+    font-family: var(--font-padrao);
+}
+main p{
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    font-size: 1em;
+    line-height: 2em;
+}
+main strong{
+    color: var(--cor4);
+    font-weight: bold;
+    padding: 2px 6px;
+}
+main a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor5);
+    background-color: var(--cor1);
+    padding: 2px 6px;
+}
+main a:hover{
+    text-decoration: underline;
+    color: var(--cor3);
+}
+header{
+    background-image:linear-gradient(to bottom, var(--cor2), var(--cor0));
+    min-height: 150px;
+    text-align: center;
+    padding-top: 40px;
+}
+header > h1 {
+    color: var(--cor5);
+    font-family: var(--font-destaque);
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.418);
+    font-size: 3em;
+}
+header > p {
+    color: white;
+    font-family: var(--font-padrao);
+    font-size: 1,2em;
+    margin-bottom: 20px;
+}
+nav {
+    background-color: var(--cor5);
+    padding: 10px;
+    position: fixed ;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+nav >a{
+    color: var(--cor1);
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+nav >a:hover{
+    background-color: var(--cor3);
+    color: var(--cor5);
+}
+main{
+    min-width: 300px;
+    max-width: 1000px;
+    background-color: white;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.562);
+    border-radius: 0px 0px 10px 10px;
+}
+main h1 {
+    color: var(--cor5);
+    font-family: var(--font-android);
+    background-image: linear-gradient(to right, #faf45159 , rgba(255, 255, 255, 0));
+}
+main h2{
+    font-family: var(--font-android);
+    color: var(--cor4);
+    font-size: 1.3em;
+    background-image: linear-gradient(to right, #faf45159 , rgba(255, 255, 255, 0));
+}
+
+
+
+div.video{
+    background-color: var(--cor0);
+    margin:20px -20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Garante que o contêiner ocupe toda a altura da janela */
+
+}  
+
+aside{
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.397);
+}
+aside > ul {
+    list-style-position: inside;
+    columns: 2;
+    list-style-type: '\2714\00A0';
+    
+}
+aside > h3 {
+    background-color: var(--cor5);
+    color: white;
+    padding: 5px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+}
+footer{
+    background-color: var(--cor5);
+    color: white;
+    text-align: right;
+    font-size: 1em;
+    padding: 7px;
+}
+
+main > picture >.img-ctn{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Garante que o contêiner ocupe toda a altura da janela */
+    background-color: #f5f5f5; /* Fundo claro para destacar as imagens */
+}
+
+.img-cnt {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente as imagens */
+    gap: 20px; /* Espaço entre os contêineres de imagem */
+    flex-wrap: wrap
+    
+}
+
+.image-item {
+    text-align: center; /* Centraliza a imagem e a legenda */
+    flex: 1 1 calc(33.333% 20px); /* Ajusta a largura das imagens e considera o espaço entre elas */
+    margin: 10px; /* Espaço ao redor de cada contêiner de imagem */
+}
+
+.image-item img {
+    max-width: 250px; /* Define a largura máxima para as imagens */
+    height: auto; /* Mantém a proporção da imagem */
+    border: 2px solid #ccc; /* Borda fina ao redor das imagens */
+    padding: 5px; /* Espaço interno das imagens */
+    background-color: #fff; /* Fundo branco para as imagens */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.image-item img:hover {
+    transform: translateY(-8px); /* Move a imagem 4 pixels para cima */
+}
+
+.caption {
+    margin-top: 10px; /* Espaço entre a imagem e a legenda */
+    font-size: 14px; /* Tamanho da fonte da legenda */
+    color: #333; /* Cor da fonte da legenda */
+}
